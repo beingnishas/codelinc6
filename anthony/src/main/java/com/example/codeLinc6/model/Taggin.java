@@ -1,4 +1,4 @@
-
+package com.example.codeLinc6.model;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -32,7 +32,7 @@ public class Taggin {
 		
 		job.add("Vocational Rehabilitation and Employment");
 		job.add("Caregiver Support");
-		job.add("eBenefits");5
+		job.add("eBenefits");
 		
 		
 		healthcare.add("Veterans Choice Program");
@@ -53,7 +53,7 @@ public class Taggin {
 		healthcare.add("Federal Recovery Coordination Program");
 		healthcare.add("Health Care Eligibility");
 		healthcare.add("Mental Health");
-		he5althcare.add("My HealtheVet");
+		healthcare.add("My HealtheVet");
 		
 				//federal,healthcare,food,housing,state,money,job,insurance
 				for(String org : keys) {
@@ -72,7 +72,7 @@ public class Taggin {
 					else if(housing.contains(org)) {
 						ret.putIfAbsent(org,new ArrayList<String>());
 						ret.get(org).add("housing");
-					}ss
+					}
 					else if(education.contains(org)) {
 						ret.putIfAbsent(org,new ArrayList<String>());
 						ret.get(org).add("education");
