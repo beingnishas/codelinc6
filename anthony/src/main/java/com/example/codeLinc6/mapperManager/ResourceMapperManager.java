@@ -15,7 +15,7 @@ import com.example.codeLinc6.model.Veteran;
  */
 public class ResourceMapperManager {
 
-	public ArrayList<String>  getResources(ArrayList<String> tags, TreeMap<String,ArrayList<String>> resources, ArrayList<String> keepers){
+	public ArrayList<String> getResources(ArrayList<String> tags, TreeMap<String,ArrayList<String>> resources, ArrayList<String> keepers){
 		return res.match(tags, resources, keepers);
 	}
 }
