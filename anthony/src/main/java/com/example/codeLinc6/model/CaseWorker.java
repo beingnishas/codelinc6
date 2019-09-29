@@ -43,9 +43,4 @@ public class CaseWorker
         return this.veteranList;
     }
     
-    public static void main(String[] aargs)
-    {
-    	System.out.println("Hello World!");
-
-    }
 }
