@@ -32,7 +32,8 @@ public class CombinedResources {
 			st = st.replaceAll("\\P{Print}", "...");
 			Pattern p = Pattern.compile("\\.{2,}");
 			String[] resourceArr = p.split(st);
-			String name = resourceArr[0];
+			String name = resourceArr[0].trim();
+			name = name.replaceAll("\n","");
 			String contact = resourceArr[1];
 			ArrayList<String> empty = new ArrayList<String>();
 			resources.putIfAbsent(name, empty);
