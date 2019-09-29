@@ -2,17 +2,18 @@ package com.example.codeLinc6;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
-import model.CaseWorker;
-import model.Veteran;
+import com.example.codeLinc6.model.*;
 import java.util.ArrayList;
 @SpringBootApplication
+@ComponentScan("com.example.CodeLinc6")
 public class CodeLinc6Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CodeLinc6Application.class, args);
 		
-		Veteran myVeteran = new Veteran();
+		com.example.codeLinc6.model.Veteran myVeteran = new com.example.codeLinc6.model.Veteran();
 		
 		myVeteran.setName("James Barksdale Sr.");
 		myVeteran.setBirthdate("06/27/2001");

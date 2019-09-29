@@ -1,4 +1,4 @@
-package model;
+package com.example.codeLinc6.model;
 
 import java.util.ArrayList;
 
