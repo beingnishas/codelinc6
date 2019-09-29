@@ -1,5 +1,7 @@
 package com.example.codeLinc6.mapperManager;
 import java.util.ArrayList;
+import java.util.TreeMap;
+
 import com.example.codeLinc6.model.*;
 
 import org.springframework.stereotype.Component;
@@ -13,7 +15,7 @@ import com.example.codeLinc6.model.Veteran;
  */
 public class ResourceMapperManager {
 
-	public ArrayList<ResourceMatcher>  getResources(){
-		return new ArrayList<ResourceMatcher>();
+	public ArrayList<String>  getResources(ArrayList<String> tags, TreeMap<String,ArrayList<String>> resources, ArrayList<String> keepers){
+		return res.match(tags, resources, keepers);
 	}
 }
