@@ -16,25 +16,27 @@ import org.springframework.stereotype.Component;
 import com.example.codeLinc6.model.Veteran;
 
 
-@Component("ResourceMapperManager")
+
 /*
  * This is what returns and does CRUD operations such as add resources, get all , delete etc.
  * The "database" obj should be created here i.e. object that is storing our vertens
  */
+@Component()
 public class ResourceMapperManager {
 
 	
-	public ArrayList<String>  getResources(String filter){
-		TreeMap contactResources = parse("vets.txt");
+	public ArrayList<Resource>  getResources(String filter) throws IOException{
+		TreeMap contactResources = parse("./vets.txt");
 		TreeMap tagresources = tag(contactResources.keySet());
-		return match((ArrayList<String>) Arrays.asList(filter), tagresources, new ArrayList<String>,contactResources);
+		ArrayList keeper = new ArrayList<Resource>();
+		return match( new ArrayList<String>(Arrays.asList(filter)), tagresources, keeper,contactResources);
 	}
 	
 	
 
 		public static TreeMap<String,ArrayList<String>> parse(String filename) throws IOException {
 			// Insert filepath here
-			String filepath = "C:\\Users\\schmi\\Documents\\GitHub\\codelinc6\\will\\" + filename;
+			String filepath = "/Users/user/Desktop/CodeLinc006/anthony/src/main/java/com/example/codeLinc6/mapperManager/" + filename;
 			File file = new File(filepath); 
 			BufferedReader br = new BufferedReader(new FileReader(file)); 
 			String st; 
@@ -145,7 +147,7 @@ public class ResourceMapperManager {
 			}
 			return ret;
 		}
-		public static ArrayList<String> match(ArrayList<String> tags, TreeMap<String,ArrayList<String>> resources, ArrayList<String> keepers, TreeMap<String,ArrayList<String>> contact) {
+		public static ArrayList<Resource> match(ArrayList<String> tags, TreeMap<String,ArrayList<String>> resources, ArrayList<Resource> keepers, TreeMap<String,ArrayList<String>> contact) {
 			if(tags.isEmpty()) {
 				return(keepers);
 			}
@@ -164,10 +166,7 @@ public class ResourceMapperManager {
 				}
 				if(highest<count) {
 					highest = count;
-					//				for(String el:resources.get(k)) {
-					//					k += " " + el;
-					//				}
-					//				k = k + " zip: 27406";
+									
 					keep = k;
 					bestRemove = currRemove;
 				}
@@ -176,8 +175,12 @@ public class ResourceMapperManager {
 				return(keepers);
 			}
 			tags.removeAll(bestRemove);
-			keepers.add(keep);
+			Resource keepres = new Resource();
+			keepres.setName(keep);
+			keepres.setZip("27206");
+			keepers.add(keepres);
 			resources.remove(keep);
 			return(match(tags,resources,keepers,contact));
 		}
 
+}

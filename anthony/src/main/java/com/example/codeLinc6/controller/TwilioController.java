@@ -21,7 +21,7 @@ public class TwilioController
 	public int sendTextMessage(@RequestParam("txt") String text)
 	{
 		
-		textMessage.sendTextMessage(text);
+		textMessage.sendTextMessage(text, true);
 		return 1;
 	}
 	
