@@ -12,7 +12,7 @@ public class CombinedResources {
 	public static ArrayList<String> parse(filename) throws IOException {
 		// Insert filepath here
 		String filename = "vets.txt";
-		String filepath = "/resources/" + filename;
+		String filepath = "C:\\Users\\schmi\\Documents\\GitHub\\codelinc6\\will\\" + filename;
 		File file = new File(filepath); 
 		BufferedReader br = new BufferedReader(new FileReader(file)); 
 		String st; 

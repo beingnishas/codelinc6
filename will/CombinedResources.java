@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
 public class CombinedResources {
 	public static TreeMap<String,ArrayList<String>> parse(String filename) throws IOException {
 		// Insert filepath here
-		String filepath = "/Users/user/Desktop/CodeLinc006/anthony/src/main/java/com/example/codeLinc6/mapperManager/" + filename;
+		String filepath = "C:\\\\Users\\\\schmi\\\\Documents\\\\GitHub\\\\codelinc6\\\\will\\\\" + filename;
 		File file = new File(filepath); 
 		BufferedReader br = new BufferedReader(new FileReader(file)); 
 		String st; 
@@ -159,11 +159,19 @@ public class CombinedResources {
 		keepres.setZip("27206");
 		if(keepers.size()%2 != 0)
 		keepres.setZip("27708");
-		keepres.addContact(contact.get(keep).get(0));
-		keepres.addContact(contact.get(keep).get(1));
+//		keepres.addContact(contact.get(keep).get(0));
+//		keepres.addContact(contact.get(keep).get(1));
 		keepers.add(keepres);
 		resources.remove(keep);
 		return(match(tags,resources,keepers,contact));
+	}
+	public static void main(String[] args) throws IOException {
+		TreeMap contactResources = parse("vets.txt");
+		String filter = "healthcare housing job";
+		TreeMap tagresources = tag(contactResources.keySet());
+		ArrayList keeper = new ArrayList<Resource>();
+		String [] filterarr = filter.split(" ");
+		System.out.println(match( new ArrayList<String>(Arrays.asList(filterarr)), tagresources, keeper,contactResources));
 	}
 
 

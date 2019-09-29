@@ -184,8 +184,8 @@ public class ResourceMapperManager {
 				keepres.setZip("27206");
 				if(keepers.size()%2 != 0)
 				keepres.setZip("27708");
-			keepres.addContact(contact.get(keep).get(0));
-			keepres.addContact(contact.get(keep).get(1));
+//			keepres.addContact(contact.get(keep).get(0));
+//			keepres.addContact(contact.get(keep).get(1));
 			keepers.add(keepres);
 			resources.remove(keep);
 			return(match(tags,resources,keepers,contact));
