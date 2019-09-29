@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.1/css/materialize.min.css">
 
 <style>
 html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
@@ -37,15 +38,12 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 
 <!-- Navbar on small screens -->
 <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+  <a href="dashboard.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
   <a href="profile.html" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
-
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">Services</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">History</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">Notifications</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">FAQ</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">Contact Us</a>
-
-
+  <a href="services.html" class="w3-bar-item w3-button w3-padding-large">Services</a>
+  <a href="history.html" class="w3-bar-item w3-button w3-padding-large">History</a>
+  <a href="faqs.html" class="w3-bar-item w3-button w3-padding-large">FAQ</a>
+  <a href="contactus.html" class="w3-bar-item w3-button w3-padding-large">Contact Us</a>
 </div>
 
 <!-- Page Container -->
@@ -89,7 +87,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 			  </tr>
 			  <tr>
 				<td><i class="fa fa-bullseye w3-text-blue w3-large"></i></td>
-				<td>Check transactions.</td>
+				<td>Check transactions</td>
 			  </tr>
 			  <tr>
 				<td><i class="fa fa-bullseye w3-text-red w3-large"></i></td>
@@ -183,12 +181,17 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 			
 			<h5>Based on your profile here are some recommendations</h5>
 			
-<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%; display:inline-block;">
+				<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%; display:inline-block;">
 					<div class="card-body">
 						<div class="results w3-container w3-card w3-white w3-round w3-margin">
 							<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%;">
 								<div class="card-body">
-									<p>Healthcare Services</p>
+								 <!-- 	<p><a href="services.html">Healthcare Services</p>
+						<button onclick="window.open('https://www.our-url.com')" id="myButton" class="btn request-callback" >Explore More  </button>
+     <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">2</span></button>     
+-->
+									<p><button onclick="window.open('services.html')" id="myButton" class="btn request-callback" >Healthcare Services </button></p>
+									
 								</div>
 							</div>
 						</div>
@@ -199,7 +202,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 						<div class="results w3-container w3-card w3-white w3-round w3-margin">
 							<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%;">
 								<div class="card-body">
-									<p>   Housing Services</p>
+									<p><button onclick="window.open('services.html')" id="myButton" class="btn request-callback" >Housing Services </button></p>
 								</div>
 							</div>
 						</div>
@@ -209,7 +212,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 						<div class="results w3-container w3-card w3-white w3-round w3-margin">
 							<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%;">
 								<div class="card-body">
-									<p>Pension Services    </p>
+								<p><button onclick="window.open('services.html')" id="myButton" class="btn request-callback" >Pension Services </button></p>
 								</div>
 							</div>
 						</div>
@@ -220,7 +223,8 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 						<div class="results w3-container w3-card w3-white w3-round w3-margin">
 							<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%;">
 								<div class="card-body">
-									<p>Certificate Services</p>
+			 					<p><button onclick="window.open('services.html')" id="myButton" class="btn request-callback" >Certificate Services </button></p>
+
 								</div>
 							</div>
 						</div>
@@ -231,7 +235,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 						<div class="results w3-container w3-card w3-white w3-round w3-margin">
 							<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%;">
 								<div class="card-body">
-									<p>Food Services</p>
+								<p><button onclick="window.open('services.html')" id="myButton" class="btn request-callback" >Food Services </button></p>
 								</div>
 							</div>
 						</div>
@@ -242,7 +246,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 						<div class="results w3-container w3-card w3-white w3-round w3-margin">
 							<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%;">
 								<div class="card-body">
-									<p>Legal Services</p>
+									<p><button onclick="window.open('services.html')" id="myButton" class="btn request-callback" >Legal Services </button></p>
 								</div>
 							</div>
 						</div>
@@ -254,57 +258,6 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
         </div>
       </div>
 	  
-	  
-<!--<div class="results w3-container w3-card w3-white w3-round w3-margin">
-<h5>Based on your profile here are some recommendations </h5>
-				<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%; display:inline-block;">
-					<div class="card-body">
-						<div class="results w3-container w3-card w3-white w3-round w3-margin">
-							<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%;">
-								<div class="card-body">
-									<p >Health care services</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%; display:inline-block;">
-					<div class="card-body">
-						<div class="results w3-container w3-card w3-white w3-round w3-margin">
-							<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%;">
-								<div class="card-body">
-									<p >Health care services</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			  <div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%; display:inline-block;">
-					<div class="card-body">
-					<div class="results w3-container w3-card w3-white w3-round w3-margin">
-				<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%;">
-					<div class="card-body">
-					<p>Insurance services</p>
-              </div>
-			  </div>
-</div>
-              </div>
-			  </div>
-			  <div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%; display:inline-block;">
-					<div class="card-body">
-					<div class="results w3-container w3-card w3-white w3-round w3-margin">
-				<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%;">
-					<div class="card-body">
-					<p class="card-text">Housing Services</p>
-              </div>
-			  </div>
-</div>
-              </div>
-			  </div>
-</div> -->
-
-	  
-    
     </div>
     
     <!-- Right Column
