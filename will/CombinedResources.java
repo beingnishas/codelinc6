@@ -10,6 +10,26 @@ import java.util.TreeMap;
 import java.util.regex.Pattern;
 
 public class CombinedResources {
+//	public static ArrayList<String> idkfam(ArrayList<String> matches,TreeMap taggedResources, TreeMap  contactResources) {
+//		for(String str : matches) {
+//			System.out.println(str);
+//			if(taggedResources.containsKey(str)) {
+//				for(String el:taggedResources.get(str)) {
+//					str += " " + el;
+//				}
+//			}
+//			if(contactResources.containsKey(str)) {
+//				for(String con:contactResources.get(str)) {
+//					str += " " + con;
+//				}
+//			}
+//			str = str + " zip: 27406"
+//			ArrayList ret = ArrayList<String>();
+//			ret.add(str);
+//			
+//	}
+//		return ret;
+//	}
 	public static TreeMap<String,ArrayList<String>> parse(String filename) throws IOException {
 		// Insert filepath here
 		String filepath = "C:\\Users\\schmi\\Documents\\GitHub\\codelinc6\\will\\" + filename;
@@ -39,6 +59,7 @@ public class CombinedResources {
 			resources.putIfAbsent(name, empty);
 			((ArrayList<String>) resources.get(name)).add(contact);
 		}
+
 		br.close();
 		return resources;
 	}
@@ -52,9 +73,9 @@ public class CombinedResources {
 		housing.add("Home Loans");
 		housing.add("Homeless Veterans");
 		housing.add("Home Loan Guaranty");
-		
+
 		education.add("Caregiver Support");
-		
+
 		education.add("Education");
 		education.add("Vocational Rehabilitation and Employment");
 		education.add("Education Benefits");
@@ -65,12 +86,12 @@ public class CombinedResources {
 		money.add("VA Benefit Payment Rates");
 		money.add("Life Insurance");
 		money.add("Home Loan Guaranty");
-		
+
 		job.add("Vocational Rehabilitation and Employment");
 		job.add("Caregiver Support");
 		job.add("eBenefits");
-		
-		
+
+
 		healthcare.add("Veterans Choice Program");
 		healthcare.add("Meeting the Unique Needs of Women Veterans");
 		healthcare.add("Services for Blind and Visually Impaired Veterans");
@@ -126,6 +147,9 @@ public class CombinedResources {
 		for(String t:tags) {
 			System.out.println(t);
 		}
+		return ret;
+	}
+	public static ArrayList<String> match(ArrayList<String> tags, TreeMap<String,ArrayList<String>> resources, ArrayList<String> keepers, TreeMap<String,ArrayList<String>> contact) {
 		if(tags.isEmpty()) {
 			return(keepers);
 		}
@@ -144,6 +168,10 @@ public class CombinedResources {
 			}
 			if(highest<count) {
 				highest = count;
+				//				for(String el:resources.get(k)) {
+				//					k += " " + el;
+				//				}
+				//				k = k + " zip: 27406";
 				keep = k;
 				bestRemove = currRemove;
 			}
@@ -152,20 +180,30 @@ public class CombinedResources {
 			return(keepers);
 		}
 		tags.removeAll(bestRemove);
-		for(String s:bestRemove) {
-			System.out.println(s);
-		}
 		keepers.add(keep);
 		resources.remove(keep);
-		return(match(tags,resources,keepers));
+		return(match(tags,resources,keepers,contact));
 	}
 	public static void main(String[] args) throws IOException {
-		TreeMap resources = parse("vets.txt");
-		TreeMap taggedResources = tag(resources.keySet());
-		ArrayList<String> tags = new ArrayList<String>(Arrays.asList("healthcare","job"));
-		ArrayList<String> matches = match(tags,taggedResources,new ArrayList<String>());
+		TreeMap<String,ArrayList<String>> contactResources = parse("vets.txt");
+		TreeMap<String,ArrayList<String>> taggedResources = tag(contactResources.keySet());
+		ArrayList<String> tags = new ArrayList<String>(Arrays.asList("healthcare","job","financial"));
+		ArrayList<String> matches = match(tags,taggedResources,new ArrayList<String>(),contactResources);
 		for(String k:matches) {
+			if(taggedResources.containsKey(k)) {
+				for(String el:taggedResources.get(k)) {
+					k += " " + el;
+				}
+			}
+			if(contactResources.containsKey(k)) {
+				for(String con:contactResources.get(k)) {
+					k += " " + con;
+				}
+			}
+			k = k + " zip: 27406";
 			System.out.println(k);
+			System.out.println(String.valueOf(idkfam(matches,taggedResources,contactResources)));
 		}
+		
 	}
 }

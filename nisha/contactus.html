@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<title>Team Athena Help Center</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+<style>
+html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+</style>
+<body class="w3-theme-l5">
+ 
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="dashboard.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Athena Help Center</a>
+  <a href="profile.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="My Profile"><i class="fa fa-user"></i></a>
+    <a href="services.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Services"><i class="	fa fa-handshake-o"></i></a>
+
+ </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+  <a href="dashboard.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
+  <a href="profile.html" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
+  <a href="services.html" class="w3-bar-item w3-button w3-padding-large">Services</a>
+  </div>
+
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    <div class="w3-col m3">
+      <!-- Profile -->
+      <br>
+
+  
+    
+    <!-- End Left Column -->
+    </div>
+    
+    <!-- Middle Column -->
+    <div class="w3-col m7">
+      <div class="w3-row-padding">
+        <div class="w3-col m12">
+          <div class="w3-card w3-round w3-white">
+            <div class="w3-container w3-padding">
+			<h5 class="w3-button w3-theme">Phone Numbers</h5>
+	
+			
+<li>Bereavement Counseling..................................................1-202-461-6530 </li>
+<li>Civilian Health and Medical Program (CHAMPVA)...........1-800-733-8387</li> 
+<li>Caregiver Support ........................................................... 1-855-260-3274</li> 
+<li>Debt Management Center………………………….......…..1-800-827-0648</li> 
+<li>Education..........................................................................1-888-442-4551</li> 
+<li>Foreign Medical Program…………….......................…….1-888-820-1756</li> 
+<li>Headstones and Markers.................................................1-800-697-6947</li> 
+<li>Health Care......................................................................1-877-222-8387</li> 
+<li>Homeless Veterans..........................................................1-877-424-3838</li> 
+<li>Home Loans.....................................................................1-888-827-3702</li> 
+<li>Life Insurance...................................................................1-800-669-8477</li> 
+<li>National Cemetery Scheduling Office...............................1-800-535-1117</li> 
+<li>Pension Management Center...........................................1-877-294-6380</li> 
+<li>Presidential Memorial Certificate Program.......................1-202-565-4964</li> 
+<li>Telecommunication Device for the Deaf (TDD)................1-800-829-4833</li> 
+<li>VA Benefits.......................................................................1-800-827-1000</li> 
+<li>VA Combat Call Center ……………………………....…….1-877-927-8387</li> 
+<li>Veterans Crisis Line..........................................................1-800-273-8255</li> 
+<li>Women Veterans..............................................................1-877-222-8387
+			<p>
+<br>
+			</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- End Grid -->
+  </div>
+  
+<!-- End Page Container -->
+</div>
+<br>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+  <h5>Prototype Application for CodeLinc6!</h5>
+</footer>
+
+<script>
+// Accordion
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-theme-d1";
+  } else { 
+    x.className = x.className.replace("w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-theme-d1", "");
+  }
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html> 
+
