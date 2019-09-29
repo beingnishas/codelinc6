@@ -97,19 +97,19 @@ public class CombinedResources {
 						ret.putIfAbsent(org, new ArrayList<String>());
 						ret.get(org).add("healthcare");
 					}
-					else if(money.contains(org)) {
+					if(money.contains(org)) {
 						ret.putIfAbsent(org,new  ArrayList<String>());
 						ret.get(org).add("financial");
 					}
-					else if(job.contains(org)) {
+					if(job.contains(org)) {
 						ret.putIfAbsent(org,new ArrayList<String>());
 						ret.get(org).add("job");
 					}
-					else if(housing.contains(org)) {
+					if(housing.contains(org)) {
 						ret.putIfAbsent(org,new ArrayList<String>());
 						ret.get(org).add("housing");
 					}
-					else if(education.contains(org)) {
+					if(education.contains(org)) {
 						ret.putIfAbsent(org,new ArrayList<String>());
 						ret.get(org).add("education");
 					}
