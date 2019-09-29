@@ -43,4 +43,12 @@ public class CaseWorker
         return this.veteranList;
     }
     
+    public Veteran getVeteran(ArrayList<Veteran> list, String ssn) {
+    	for(int i = 0; i < list.size(); i++) {
+    		if(list.get(i).getSSN().equals(ssn)) {
+    			return list.get(i);
+    		}
+    	}
+    }
+    
 }
