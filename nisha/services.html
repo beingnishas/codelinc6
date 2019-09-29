@@ -60,27 +60,13 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
     
     <!-- Middle Column -->
     <div class="w3-col m15">
-      
-        <div class="title w3-row-padding">
-          <div class="w3-col m12">
-            <div class="w3-card w3-round w3-white">
-              <div class="w3-container w3-padding">
-                  <h2 class="big-text">Explore Services</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-
       <div class="w3-row-padding">
         <div class="w3-col m12">
           <div class="w3-card w3-round w3-white">
             <div class="w3-container w3-padding">
-                <div class="input-group mb-3 w-75 m-auto">
-                    <input type="text" class="form-control search-input" style="font-size: 1.75rem;" placeholder="Enter search here..." aria-label="search here" aria-describedby="button-addon2">
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" style="font-size: 1.75rem;" type="button" id="button-addon2"><ion-icon name="search"></ion-icon></button>
-                    </div>
-                </div>
+              <h6 class="w3-opacity">Explore Services: Enter in the services you are looking for</h6>
+              <p contenteditable="true" class="w3-border w3-padding" name="search-input"></p>
+              <button type="button" class="w3-button w3-theme" id="search-btn"></i><ion-icon name="search"></ion-icon> Search</button>
             </div>
           </div>
         </div>
@@ -170,6 +156,7 @@ function openNav() {
 }
 </script>
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+<script src="js/services.js"></script>
 </body>
 </html> 
 
