@@ -1,11 +1,14 @@
 const HTTP = new XMLHttpRequest();
-const URL = "https://postman-echo.com/get";
+const URL = "http://localhost:8080/services/search?filter=";
 
 var searchButton = document.getElementById("search-btn");
 
+
 searchButton.onclick = function() {
     
-    HTTP.open("GET", URL);
+    var query = document.getElementById("search-input").innerHTML;
+
+    HTTP.open("GET", URL + query);
     HTTP.send();
     
     HTTP.onreadystatechange = function() {
