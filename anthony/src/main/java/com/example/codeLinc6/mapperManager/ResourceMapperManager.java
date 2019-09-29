@@ -14,7 +14,7 @@ import com.example.codeLinc6.model.*;
 import org.springframework.stereotype.Component;
 
 import com.example.codeLinc6.model.Veteran;
-import CombinedResources;
+
 
 @Component("ResourceMapperManager")
 /*
@@ -22,12 +22,12 @@ import CombinedResources;
  * The "database" obj should be created here i.e. object that is storing our vertens
  */
 public class ResourceMapperManager {
-	private CombinedResources comb;
+
 	
 	public ArrayList<String>  getResources(String filter){
-		TreeMap contactresources = parse("vets.txt");
-		TreeMap tagresources = tag(resources.keySet());
-		return match(Arrays.asList(filter), tagresources, new ArrayList<String>,contactresources);
+		TreeMap contactResources = parse("vets.txt");
+		TreeMap tagresources = tag(contactResources.keySet());
+		return match((ArrayList<String>) Arrays.asList(filter), tagresources, new ArrayList<String>,contactResources);
 	}
 	
 	
