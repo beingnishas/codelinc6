@@ -3,16 +3,37 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.regex.Pattern;
 
 public class CombinedResources {
-	public static ArrayList<String> parse(filename) throws IOException {
+	public static ArrayList<String> idkfam(ArrayList<String> matches,TreeMap taggedResources, TreeMap  contactResources) {
+		for(String k:matches) {
+		
+		
+			if(taggedResources.containsKey(k)) {
+				for(String el:taggedResources.get(k)) {
+					k += " " + el;
+				}
+			}
+			if(contactResources.containsKey(k)) {
+				for(String con:contactResources.get(k)) {
+					k += " " + con;
+				}
+			}
+			k = k + " zip: 27406"
+			ArrayList ret = ArrayList<String>();
+			ret.add(k);
+			
+	}
+		return ret;
+	}
+	public static TreeMap<String,ArrayList<String>> parse(String filename) throws IOException {
 		// Insert filepath here
-		String filename = "vets.txt";
-		String filepath = "/resources/" + filename;
+		String filepath = "C:\\Users\\schmi\\Documents\\GitHub\\codelinc6\\will\\" + filename;
 		File file = new File(filepath); 
 		BufferedReader br = new BufferedReader(new FileReader(file)); 
 		String st; 
@@ -32,43 +53,46 @@ public class CombinedResources {
 			st = st.replaceAll("\\P{Print}", "...");
 			Pattern p = Pattern.compile("\\.{2,}");
 			String[] resourceArr = p.split(st);
-			String name = resourceArr[0];
+			String name = resourceArr[0].trim();
+			name = name.replaceAll("\n","");
 			String contact = resourceArr[1];
 			ArrayList<String> empty = new ArrayList<String>();
 			resources.putIfAbsent(name, empty);
 			((ArrayList<String>) resources.get(name)).add(contact);
 		}
+
 		br.close();
+		return resources;
 	}
-	public Map<String,ArrayList<String>> tag(Set<String> keys) {
-		Map<String,ArrayList<String>> ret = new TreeMap<String,ArrayList<String>>();
+	public static TreeMap<String,ArrayList<String>> tag(Set<String> keys) {
+		TreeMap<String,ArrayList<String>> ret = new TreeMap<String,ArrayList<String>>();
 		ArrayList<String> housing = new ArrayList<String>();
 		ArrayList<String> healthcare = new ArrayList<String>();
 		ArrayList<String> job = new ArrayList<String>();
 		ArrayList<String> education = new ArrayList<String>();
 		ArrayList<String> money = new ArrayList<String>();
-		ArrayList<String> other = new ArrayList<String>();
 		housing.add("Home Loans");
 		housing.add("Homeless Veterans");
 		housing.add("Home Loan Guaranty");
-		
+
 		education.add("Caregiver Support");
-		
+
 		education.add("Education");
 		education.add("Vocational Rehabilitation and Employment");
 		education.add("Education Benefits");
-		
+		education.add("eBenefits");
+
 		money.add("Pension Management Center");
 		money.add("Vocational Rehabilitation and Employment");
 		money.add("VA Benefit Payment Rates");
 		money.add("Life Insurance");
 		money.add("Home Loan Guaranty");
-		
+
 		job.add("Vocational Rehabilitation and Employment");
 		job.add("Caregiver Support");
 		job.add("eBenefits");
-		
-		
+
+
 		healthcare.add("Veterans Choice Program");
 		healthcare.add("Meeting the Unique Needs of Women Veterans");
 		healthcare.add("Services for Blind and Visually Impaired Veterans");
@@ -88,39 +112,39 @@ public class CombinedResources {
 		healthcare.add("Health Care Eligibility");
 		healthcare.add("Mental Health");
 		healthcare.add("My HealtheVet");
-		
-				//federal,healthcare,food,housing,state,money,job,insurance
-				for(String org : keys) {
-					if(healthcare.contains(org)) {
-						ret.putIfAbsent(org, new ArrayList<String>());
-						ret.get(org).add("healthcare");
-					}
-					else if(money.contains(org)) {
-						ret.putIfAbsent(org,new  ArrayList<String>());
-						ret.get(org).add("financial");
-					}
-					else if(job.contains(org)) {
-						ret.putIfAbsent(org,new ArrayList<String>());
-						ret.get(org).add("job");
-					}
-					else if(housing.contains(org)) {
-						ret.putIfAbsent(org,new ArrayList<String>());
-						ret.get(org).add("housing");
-					}
-					else if(education.contains(org)) {
-						ret.putIfAbsent(org,new ArrayList<String>());
-						ret.get(org).add("education");
-					}
-					else {
-						ret.putIfAbsent(org, new ArrayList<String>());
-						ret.get(org).add("other");
-					}
-						
-					
-				}
-				return ret;
+
+		//federal,healthcare,food,housing,state,money,job,insurance
+		for(String org : keys) {
+			if(healthcare.contains(org)) {
+				ret.putIfAbsent(org, new ArrayList<String>());
+				ret.get(org).add("healthcare");
+			}
+			if(money.contains(org)) {
+				ret.putIfAbsent(org,new  ArrayList<String>());
+				ret.get(org).add("financial");
+			}
+			if(job.contains(org)) {
+				ret.putIfAbsent(org,new ArrayList<String>());
+				ret.get(org).add("job");
+			}
+			if(housing.contains(org)) {
+				ret.putIfAbsent(org,new ArrayList<String>());
+				ret.get(org).add("housing");
+			}
+			if(education.contains(org)) {
+				ret.putIfAbsent(org,new ArrayList<String>());
+				ret.get(org).add("education");
+			}
+			else {
+				ret.putIfAbsent(org, new ArrayList<String>());
+				ret.get(org).add("other");
+			}
+
+
+		}
+		return ret;
 	}
-	public ArrayList<String> match(ArrayList<String> tags, TreeMap<String,ArrayList<String>> resources, ArrayList<String> keepers) {
+	public static ArrayList<String> match(ArrayList<String> tags, TreeMap<String,ArrayList<String>> resources, ArrayList<String> keepers, TreeMap<String,ArrayList<String>> contact) {
 		if(tags.isEmpty()) {
 			return(keepers);
 		}
@@ -139,6 +163,10 @@ public class CombinedResources {
 			}
 			if(highest<count) {
 				highest = count;
+				//				for(String el:resources.get(k)) {
+				//					k += " " + el;
+				//				}
+				//				k = k + " zip: 27406";
 				keep = k;
 				bestRemove = currRemove;
 			}
@@ -149,15 +177,28 @@ public class CombinedResources {
 		tags.removeAll(bestRemove);
 		keepers.add(keep);
 		resources.remove(keep);
-		return(match(tags,resources,keepers));
+		return(match(tags,resources,keepers,contact));
 	}
-	public static void main(String[] args) {
-		resources = parse("");
-		TreeMap taggedResources = tag(resources.keySet());
-		ArrayList tags = new ArrayList<String>({"healthcare","financial","housing"});
-		ArrayList matches = match(tags,taggedResources,new ArrayList<String>)
-		for(k:matches) {
+	public static void main(String[] args) throws IOException {
+		TreeMap<String,ArrayList<String>> contactResources = parse("vets.txt");
+		TreeMap<String,ArrayList<String>> taggedResources = tag(contactResources.keySet());
+		ArrayList<String> tags = new ArrayList<String>(Arrays.asList("healthcare","job","financial"));
+		ArrayList<String> matches = match(tags,taggedResources,new ArrayList<String>(),contactResources);
+		for(String k:matches) {
+			if(taggedResources.containsKey(k)) {
+				for(String el:taggedResources.get(k)) {
+					k += " " + el;
+				}
+			}
+			if(contactResources.containsKey(k)) {
+				for(String con:contactResources.get(k)) {
+					k += " " + con;
+				}
+			}
+			k = k + " zip: 27406";
 			System.out.println(k);
+			System.out.println(String.valueOf(idkfam(matches,taggedResources,contactResources)));
 		}
+		
 	}
 }
