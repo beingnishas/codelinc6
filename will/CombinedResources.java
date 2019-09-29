@@ -122,6 +122,9 @@ public class CombinedResources {
 				return ret;
 	}
 	public static ArrayList<String> match(ArrayList<String> tags, TreeMap<String,ArrayList<String>> resources, ArrayList<String> keepers) {
+		for(String t:tags) {
+			System.out.println(t);
+		}
 		if(tags.isEmpty()) {
 			return(keepers);
 		}
@@ -148,6 +151,9 @@ public class CombinedResources {
 			return(keepers);
 		}
 		tags.removeAll(bestRemove);
+		for(String s:bestRemove) {
+			System.out.println(s);
+		}
 		keepers.add(keep);
 		resources.remove(keep);
 		return(match(tags,resources,keepers));
