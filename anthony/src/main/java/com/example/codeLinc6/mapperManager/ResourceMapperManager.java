@@ -29,7 +29,8 @@ public class ResourceMapperManager {
 		TreeMap contactResources = parse("./vets.txt");
 		TreeMap tagresources = tag(contactResources.keySet());
 		ArrayList keeper = new ArrayList<Resource>();
-		return match( new ArrayList<String>(Arrays.asList(filter)), tagresources, keeper,contactResources);
+		String [] filterarr = filter.split(" ");
+		return match( new ArrayList<String>(Arrays.asList(filterarr)), tagresources, keeper,contactResources);
 	}
 	
 	
