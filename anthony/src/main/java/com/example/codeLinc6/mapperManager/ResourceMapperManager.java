@@ -24,6 +24,7 @@ import com.example.codeLinc6.model.Veteran;
 @Component()
 public class ResourceMapperManager {
 
+
 	
 	public ArrayList<Resource>  getResources(String filter) throws IOException{
 		TreeMap contactResources = parse("./vets.txt");
@@ -32,6 +33,7 @@ public class ResourceMapperManager {
 		String [] filterarr = filter.split(" ");
 		return match( new ArrayList<String>(Arrays.asList(filterarr)), tagresources, keeper,contactResources);
 	}
+		
 	
 	
 
