@@ -148,7 +148,7 @@ public class ResourceMapperManager {
 			return ret;
 		}
 		public static ArrayList<Resource> match(ArrayList<String> tags, TreeMap<String,ArrayList<String>> resources, ArrayList<Resource> keepers, TreeMap<String,ArrayList<String>> contact) {
-			if(tags.isEmpty()) {
+			if(resources.keySet().isEmpty()) {
 				return(keepers);
 			}
 			int highest = 0;
