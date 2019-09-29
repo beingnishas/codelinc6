@@ -24,18 +24,16 @@ import com.example.codeLinc6.model.Veteran;
 @Component()
 public class ResourceMapperManager {
 
-<<<<<<< HEAD
-	public ArrayList<String> getResources(ArrayList<String> tags, TreeMap<String,ArrayList<String>> resources, ArrayList<String> keepers){
-		return res.match(tags, resources, keepers);
-=======
+
 	
 	public ArrayList<Resource>  getResources(String filter) throws IOException{
 		TreeMap contactResources = parse("./vets.txt");
 		TreeMap tagresources = tag(contactResources.keySet());
 		ArrayList keeper = new ArrayList<Resource>();
-		return match( new ArrayList<String>(Arrays.asList(filter)), tagresources, keeper,contactResources);
->>>>>>> 73364d97651194b1277529993d2bf01dbfbd50d8
+		String [] filterarr = filter.split(" ");
+		return match( new ArrayList<String>(Arrays.asList(filterarr)), tagresources, keeper,contactResources);
 	}
+		
 	
 	
 
