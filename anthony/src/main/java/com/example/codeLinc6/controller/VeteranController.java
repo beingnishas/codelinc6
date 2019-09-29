@@ -11,7 +11,7 @@ import com.example.codeLinc6.model.Veteran;
 @RestController
 public class VeteranController {
 	
-	//Configure your object to use
+	//Configure your object to use in order to use
 	@Autowired
 	VeteranMapperManager veteranMapperManager;
 	
