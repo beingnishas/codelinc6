@@ -1,4 +1,4 @@
-package codelincnongit;
+
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -53,7 +53,7 @@ public class Taggin {
 		healthcare.add("Federal Recovery Coordination Program");
 		healthcare.add("Health Care Eligibility");
 		healthcare.add("Mental Health");
-		healthcare.add("My HealtheVet");
+		he5althcare.add("My HealtheVet");
 		
 				//federal,healthcare,food,housing,state,money,job,insurance
 				for(String org : keys) {
