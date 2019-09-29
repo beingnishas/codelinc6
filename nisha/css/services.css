@@ -43,3 +43,18 @@ button[type="submit"] {
 .w3-container, .w3-panel {
     padding: 2em 16px !important;
 }
+
+.w3-top {
+    z-index: 255 !important;
+}
+
+.title {
+    margin: 1rem 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.big-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
