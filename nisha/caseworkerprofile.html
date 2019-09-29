@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Vertan-Profile</title>
+<title>CaseWorker-Profile</title>
 <!-- Made By Athena memember Joshua Karlton-Senaye -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,38 +20,51 @@
 
 <style>
 html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+
+@media (min-width: 601px) {
+	.w3-col.m7 {
+		width: 75% !important;
+	}
+}
 </style>
 <body class="w3-theme-l5">
 
 <!-- Navbar -->
 <div class="w3-top">
- <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
-  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="dashboard.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Athena Help Center</a>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="My Account"><i class="fa fa-user"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
-
-  <div class="w3-dropdown-hover w3-hide-small">
-    <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>     
-    <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
-      <a href="#" class="w3-bar-item w3-button">You might want to help Mr A, who is facing same issue which you faced last month</a>
-      <a href="#" class="w3-bar-item w3-button">Ms. CW wants more information about your case</a>
+  <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+    <a href="dashboard.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Athena Help Center</a>
+    <a href="profile.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="My Profile" aria-label="navigate to my profile"><i class="fa fa-user"></i></a>
+    <a href="services.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Services" aria-label="navigate to services"><i class="	fa fa-handshake-o"></i></a>
+    <a href="history.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="History" aria-label="navigate to history"><i class="fa fa-history"></i></a>
+      <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">2</span></button>     
+      <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+        <a href="#" class="w3-bar-item w3-button">Athena has sent you message</a><hr>
+        <a href="#" class="w3-bar-item w3-button">You have an Event UpComing</a>
+      </div>
     </div>
+    
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="FAQ"><i class="fa fa-question-circle-o"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Contact Us"><i class="fa fa-phone"></i></a>
+  
+  
+  
   </div>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
-    <img src="images/WarHeroAvatar.png" class="w3-circle" style="height:23px;width:23px" alt="WarHero">
-  </a>
- </div>
-</div>
-
-<!-- Navbar on small screens -->
-<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
-</div>
+  </div>
+  
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
+  
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Services</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">History</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Notifications</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">FAQ</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Contact Us</a>
+  
+  
+  </div>
 
 <!-- Page Container -->
 <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
@@ -62,13 +75,13 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
       <!-- Profile -->
       <div class="w3-card w3-round w3-white">
         <div class="w3-container">
-         <h4 class="w3-center">Welcome WarHero</h4>
+         <h4 class="w3-center">Welcome Mary Linc</h4>
          <p class="w3-center"><img src="images/WarHeroAvatar.png" class="w3-circle" style="height:106px;width:106px" alt="WarHero"></p>
          <hr>
-         <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i>Athena</p>
-         <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i>Branch: Armed Forces</p>
-         <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i>BirthDate: September 29, 1980 </p>
-		 <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i>Gender: Female</p>
+         <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i>Mary Linc</p>
+         <p><i class="fa fa-id-badge fa-fw w3-margin-right w3-text-theme"></i>Company: CodeLinc</p>
+         <p><i class="fa fa-id-card fa-fw w3-margin-right w3-text-theme"></i>Organizations: Tragedy Assitance Program | Hope for The Warriors | Fisher House Foundation </p>
+		 <p><i class="fa fa-female fa-fw w3-margin-right w3-text-theme"></i>Gender: Female</p>
          <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i>Address: 100 North St,NC-27406</p>
          </div>
       </div>
@@ -79,13 +92,13 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
         <div class="w3-white">
           <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> Health Care</button>
           <div id="Demo1" class="w3-hide w3-container">
-            <p>Your Health Care Provided to you is:</p>
+            <p>The Health Care Provided to your Vertan is:</p>
 			<p>Blue Cross and Blue Sheild</p>
           </div>
 		  
           <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-shopping-basket fa-fw w3-margin-right"></i> Food</button>
           <div id="Demo2" class="w3-hide w3-container">
-            <p>Food Needed for you is:</p>
+            <p>Food Needed for your Veteran is:</p>
 			<p>Bread</p>
 			<p>Soup</p>
 			
@@ -93,42 +106,29 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 		  
 		  <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-hotel fa-fw w3-margin-right"></i> Housing Care</button>
           <div id="Demo3" class="w3-hide w3-container">
-            <p>Housing is Provided to you by your Case Worker or the VA.</p>
+            <p>Available Housing for your Veteran is:</p>
+			<p>Company Center</p>
           </div>
 		  
-		  <button onclick="myFunction('Demo5')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-phone fa-fw w3-margin-right"></i> Contact your Case Worker</button>
+		  <button onclick="myFunction('Demo5')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-phone fa-fw w3-margin-right"></i> Contact your Assigned Veterans</button>
           <div id="Demo5" class="w3-hide w3-container">
 		   
-			<a class="mbscreenphone phonelink" href="tel:9402188899"><img class="phoneicon" src="https://freeiconshop.com/wp-content/uploads/edd/phone-flat.png"></a>
+			
+			<center><p style="padding-top:10px;"><a class="mbscreenphone phonelink" href="tel:9402188899" style="text-align:center;"><img class="phoneicon" src="https://freeiconshop.com/wp-content/uploads/edd/phone-flat.png" width="30%" height="auto"></a></p></center>
 
-            <p>Some other text..</p>
+            <p>Phone: 111-222-3333</p>
           </div>
 		  
-          <button onclick="myFunction('Demo4')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-users fa-fw w3-margin-right"></i> My Photos</button>
+          <button onclick="myFunction('Demo4')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-users fa-fw w3-margin-right"></i> My Team</button>
           <div id="Demo4" class="w3-hide w3-container">
          <div class="w3-row-padding">
          <br>
 		 
 		 		 
            <div class="w3-half">
-             <img src="/w3images/lights.jpg" style="width:100%" class="w3-margin-bottom">
+             <img src="images/staff.jpg" style="width:100%" class="w3-margin-bottom">
+			</div>
            </div>
-           <div class="w3-half">
-             <img src="/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
-           </div>
-           <div class="w3-half">
-             <img src="/w3images/mountains.jpg" style="width:100%" class="w3-margin-bottom">
-           </div>
-           <div class="w3-half">
-             <img src="/w3images/forest.jpg" style="width:100%" class="w3-margin-bottom">
-           </div>
-           <div class="w3-half">
-             <img src="/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
-           </div>
-           <div class="w3-half">
-             <img src="/w3images/snow.jpg" style="width:100%" class="w3-margin-bottom">
-           </div>
-         </div>
           </div>
         </div>      
       </div>
@@ -165,38 +165,69 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
         <div class="w3-col m12">
           <div class="w3-card w3-round w3-white">
             <div class="w3-container w3-padding">
-				  <div class="results w3-container w3-card w3-white w3-round w3-margin">
+				  <div class="results w3-container w31-card w3-white w3-round w3-margin">
           <div class="card w-100 p-1 m-2 border-dark" style="width: 5rem;">
               <div class="card-body">
-                  <h5 class="card-title">Date of Service is: June 1959</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">United States Armed Forces</h6>
-                  <p class="card-text"> A person who served in the active military, naval, or air service and who was discharged...</p>
-                  <p class="card-text">ID: 009-0209-0000-8931</p>
+                  <h5 class="card-title">Group Events</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Location:</h6>
+                  <p class="card-text"> This Event is taking place at East Market Street Greensboro NC</p>
+                  <p class="card-text">Organization Group: Tragedy Assitance Program </p>
               </div>
           </div>
 
           <div class="card w-100 p-1 m-2 border-dark" style="width: 5rem;">
               <div class="card-body">
-                  <h5 class="card-title">End Date of Service is: April of 1978</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">United States Armed Forces</h6>
-                 <p class="card-text"> A person who served in the active military, naval, or air service and who was discharged...</p>
-                  <p class="card-text">ID: 009-0209-0000-8931</p>
+                  <h5 class="card-title">What Kind of Veterans are under your Care</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Mobility Impaired Veterans | Visually Impaired Veterans | Hearing Impaired Veterans</h6>
+                  <p class="card-text">Number of Veterans: 5</p>
               </div>
-			</div>
+		 </div>
 			
 			
-      </div>
-              <div class="results w3-container w3-card w3-white w3-round w3-margin">
-				<div class="card w-100 p-1 m-2 border-dark" style="width: 5rem;">
-					<div class="card-body">
-						<h5 class="card-title">Types of Problems</h5>
-						<h6 class="card-subtitle mb-2 text-muted">PTSD | Jobless | HomeLess | Education</h6>
-						<p class="card-text"> These are your chosen problems you are currently dealing with. You have been assigned with your case worker. We hope to see you strong and back on your feet</p>
-                  <p class="card-text">ID: 009-0209-0000-8931</p>
+
+              <div class="card w-100 p-1 m-2 border-dark" style="width: 5rem;">
+              <div class="card-body">
+						<h5 class="card-title">Your Veterans</h5>
+						<h6 class="card-subtitle mb-2 text-muted">Urgency Level:</h6>
+						<p class="card-text">Level Five is most Important and Level One is least Important</p>
+                  <p class="card-text">Level and Name: (5) Athena | (4) Jane | (3) Jon | (2) James | (1) Hill</p>
               </div>
 			  </div>
+			  <div class="card w-100 p-1 m-2 border-dark" style="width: 5rem;">
+              <div class="card-body">
+						<h5 class="card-title">Your Veterans</h5>
+						<h6 class="card-subtitle mb-2 text-muted">Urgency Level:</h6>
+						<p class="card-text">Level Five is most Important and Level One is least Important</p>
+                  <p class="card-text">Level and Name: (5) Athena | (4) Jane | (3) Jon | (2) James | (1) Hill</p>
+              </div>
+			  
+			  </div>
+			  
+		<div class="card w-100 p-1 m-2 border-dark" style="width: 5rem;">
+              <div class="card-body">
+						<h5 class="card-title">Upcoming Outreach</h5>
+						<h6 class="card-subtitle mb-2 text-muted">Stay Tuned</h6>
+			  </div>
+		</div>
+		
+		<div class="card w-100 p-1 m-2 border-dark" style="width: 5rem;">
+              <div class="card-body">
+						<h5 class="card-title">Resources</h5>
+						<h6 class="card-subtitle mb-2 text-muted">Find The Right Resources for you:</h6>
+						<a href="https://theservantcenter.org/disability-assistance-program/">Disability-Assitance</a>
+						<a href="https://theservantcenter.org/glenwood-haworth-houses/">GlenWood-Haworth House</a>
+                  <p class="card-text">Other Links can be found at:</p>
+						<a href="https://theservantcenter.org/">GlenWood-Haworth House</a>
+              </div>
+			  </div>
+			  
+			  
+			  
+			  
+			  
+			  
           </div>
-		  
+      </div>		  
             </div>
           </div>
         </div>
