@@ -180,12 +180,12 @@ public class ResourceMapperManager {
 			tags.removeAll(bestRemove);
 			Resource keepres = new Resource();
 			keepres.setName(keep);
-			if(count%2 = 0)
-			keepres.setZip("27206");
-			if(count%2 != 0)
-			keepres.setZip("27708");
-			keepres.addContact(contact.get(k).get(0));
-			keepres.addContact(contact.get(k).get(1));
+			if(keepers.size()%2 == 0)
+				keepres.setZip("27206");
+				if(keepers.size()%2 != 0)
+				keepres.setZip("27708");
+			keepres.addContact(contact.get(keep).get(0));
+			keepres.addContact(contact.get(keep).get(1));
 			keepers.add(keepres);
 			resources.remove(keep);
 			return(match(tags,resources,keepers,contact));

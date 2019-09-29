@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.regex.Pattern;
-
+import Resource;
 public class CombinedResources {
 	public static ArrayList<String> parse(filename) throws IOException {
 		// Insert filepath here
