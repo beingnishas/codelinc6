@@ -19,5 +19,18 @@ searchButton.onclick = function()
 }
 
 
-var veteranPhoneButton = document.getElementById.
+var veteranPhoneButton = document.getElementById(phoneicon);
+veteranPhoneButton.onclick = function()
+{
+    HTTP.open("GET", URL);
+    HTTP.send();
+
+    HTTP.onreadystatechange = function()
+    {
+        if (this.readyState == 4 && this.status == 200)
+        {
+            console.log(HTTP.)
+        }
+    }
+}
 // veteran->caseWorker phonenumber onclick, caseworker->veteran phonenumber onclick, veteran searchbar onclick,  caseWorker searchbar onclick
