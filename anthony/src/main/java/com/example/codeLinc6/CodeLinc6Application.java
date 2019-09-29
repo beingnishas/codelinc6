@@ -8,9 +8,11 @@ import com.example.codeLinc6.model.*;
 import java.util.ArrayList;
 @SpringBootApplication
 @ComponentScan("com.example.CodeLinc6")
+
 public class CodeLinc6Application {
 
-	public static void main(String[] args) {
+	public static void main(String[] args)
+	{
 		SpringApplication.run(CodeLinc6Application.class, args);
 		
 		com.example.codeLinc6.model.Veteran myVeteran = new com.example.codeLinc6.model.Veteran();
