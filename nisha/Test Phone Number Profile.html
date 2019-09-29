@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<title>Vertan-Profile</title>
+<!-- Made By Athena memember Joshua Karlton-Senaye -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--   -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="css/cards.css">
+<!--   -->
+
+<!--<link rel="stylesheet" href="css/basic.css">
+<link rel="stylesheet" href="css/font_style.css">
+<link rel="stylesheet" href="css/text_styles.css">
+<link rel="stylesheet" href="css/theme_lincoln.css"> -->
+
+<style>
+html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+
+@media (min-width: 601px) {
+	.w3-col.m7 {
+		width: 75% !important;
+	}
+}
+</style>
+<body class="w3-theme-l5">
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+     <a href="dashboard.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Athena Help Center</a>
+     <a href="profile.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="My Profile" aria-label="navigate to my profile"><i class="fa fa-user"></i></a>
+     <a href="services.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Services" aria-label="navigate to services"><i class="	fa fa-handshake-o"></i></a>
+     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="History" aria-label="navigate to history"><i class="fa fa-history"></i></a>
+       <div class="w3-dropdown-hover w3-hide-small">
+       <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">2</span></button>     
+       <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+         <a href="#" class="w3-bar-item w3-button">You might want to help Mr A, who is facing same issue which you faced last month</a><hr>
+         <a href="#" class="w3-bar-item w3-button">Ms. CW wants more information about your case</a>
+       </div>
+     </div>
+     
+     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="FAQ"><i class="fa fa-question-circle-o"></i></a>
+     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Contact Us"><i class="fa fa-phone"></i></a>
+   
+   
+    
+    </div>
+   </div>
+   
+   <!-- Navbar on small screens -->
+   <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+     <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
+   
+     <a href="#" class="w3-bar-item w3-button w3-padding-large">Services</a>
+     <a href="#" class="w3-bar-item w3-button w3-padding-large">History</a>
+     <a href="#" class="w3-bar-item w3-button w3-padding-large">Notifications</a>
+     <a href="#" class="w3-bar-item w3-button w3-padding-large">FAQ</a>
+     <a href="#" class="w3-bar-item w3-button w3-padding-large">Contact Us</a>
+   
+   
+   </div>
+
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    <div class="w3-col m3">
+      <!-- Profile -->
+      <div class="w3-card w3-round w3-white">
+        <div class="w3-container">
+         <h4 class="w3-center">Welcome WarHero</h4>
+         <p class="w3-center"><img src="images/WarHeroAvatar.png" class="w3-circle" style="height:106px;width:106px" alt="WarHero"></p>
+         <hr>
+         <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i>Athena</p>
+         <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i>Branch: Armed Forces</p>
+         <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i>BirthDate: September 29, 1980 </p>
+		 <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i>Gender: Female</p>
+         <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i>Address: 100 North St,NC-27406</p>
+         </div>
+      </div>
+      <br>
+      
+      <!-- Accordion -->
+      <div class="w3-card w3-round">
+        <div class="w3-white">
+          <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> Health Care</button>
+          <div id="Demo1" class="w3-hide w3-container">
+            <p>Your Health Care Provided to you is:</p>
+			<p>Blue Cross and Blue Sheild</p>
+          </div>
+		  
+          <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-shopping-basket fa-fw w3-margin-right"></i> Food</button>
+          <div id="Demo2" class="w3-hide w3-container">
+            <p>Food Needed for you is:</p>
+			<p>Bread</p>
+			<p>Soup</p>
+			
+          </div>
+		  
+		  <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-hotel fa-fw w3-margin-right"></i> Housing Care</button>
+          <div id="Demo3" class="w3-hide w3-container">
+            <p>Housing is Provided to you by your Case Worker or the VA.</p>
+          </div>
+		  
+		  <button onclick="myFunction('Demo5')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-phone fa-fw w3-margin-right"></i> Contact your Case Worker</button>
+          <div id="Demo5" class="w3-hide w3-container">
+		   
+			
+			<center><p style="padding-top:10px;"><a class="mbscreenphone phonelink" href="tel:9402188899" style="text-align:center;"><img class="phoneicon" src="https://freeiconshop.com/wp-content/uploads/edd/phone-flat.png" width="30%" height="auto"></a></p></center>
+
+            <p>Phone: 111-222-3333</p>
+          </div>
+		  
+          <button onclick="myFunction('Demo4')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-users fa-fw w3-margin-right"></i> My Photos</button>
+          <div id="Demo4" class="w3-hide w3-container">
+         <div class="w3-row-padding">
+         <br>
+		 
+		 		 
+           <div class="w3-half">
+             <img src="/w3images/lights.jpg" style="width:100%" class="w3-margin-bottom">
+           </div>
+           <div class="w3-half">
+             <img src="/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
+           </div>
+           <div class="w3-half">
+             <img src="/w3images/mountains.jpg" style="width:100%" class="w3-margin-bottom">
+           </div>
+           <div class="w3-half">
+             <img src="/w3images/forest.jpg" style="width:100%" class="w3-margin-bottom">
+           </div>
+           <div class="w3-half">
+             <img src="/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
+           </div>
+           <div class="w3-half">
+             <img src="/w3images/snow.jpg" style="width:100%" class="w3-margin-bottom">
+           </div>
+         </div>
+          </div>
+        </div>      
+      </div>
+      <br>
+      
+      <!-- Interests --> 
+      <div class="w3-card w3-round w3-white w3-hide-small">
+        <div class="w3-container">
+          <p>Interests</p>
+          <p>
+            <span class="w3-tag w3-small w3-theme-d5">Home Loan</span>
+            <span class="w3-tag w3-small w3-theme-d4">Jobs</span>
+            <span class="w3-tag w3-small w3-theme-d3">Insurance</span>
+            <span class="w3-tag w3-small w3-theme-d2">Homeless Veterans</span>
+            <span class="w3-tag w3-small w3-theme-d1">Pension</span>
+            <span class="w3-tag w3-small w3-theme">Food</span>
+            <span class="w3-tag w3-small w3-theme-l1">Bereavement Counselling</span>
+            <span class="w3-tag w3-small w3-theme-l2">Mental Health</span>
+            <span class="w3-tag w3-small w3-theme-l3">Education Benefits</span>
+            <span class="w3-tag w3-small w3-theme-l4"> Memorial Certificate</span>
+           </p>
+        </div>
+      </div>
+      <br>
+      
+     
+    <!-- End Left Column -->
+    </div>
+    
+    <!-- Middle Column -->
+    <div class="w3-col m7">
+    
+      <div class="w3-row-padding">
+        <div class="w3-col m12">
+          <div class="w3-card w3-round w3-white">
+            <div class="w3-container w3-padding">
+				  <div class="results w3-container w31-card w3-white w3-round w3-margin">
+          <div class="card w-100 p-1 m-2 border-dark" style="width: 5rem;">
+              <div class="card-body">
+                  <h5 class="card-title">Date of Service is: June 1959</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">United States Armed Forces</h6>
+                  <p class="card-text"> A person who served in the active military, naval, or air service and who was discharged...</p>
+                  <p class="card-text">ID: 009-0209-0000-8931</p>
+              </div>
+          </div>
+
+          <div class="card w-100 p-1 m-2 border-dark" style="width: 5rem;">
+              <div class="card-body">
+                  <h5 class="card-title">End Date of Service is: April of 1978</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">United States Armed Forces</h6>
+                 <p class="card-text"> A person who served in the active military, naval, or air service and who was discharged...</p>
+                  <p class="card-text">ID: 009-0209-0000-8931</p>
+              </div>
+		 </div>
+			
+			
+
+              <div class="card w-100 p-1 m-2 border-dark" style="width: 5rem;">
+              <div class="card-body">
+						<h5 class="card-title">Types of Problems</h5>
+						<h6 class="card-subtitle mb-2 text-muted">PTSD | Jobless | HomeLess | Education</h6>
+						<p class="card-text"> These are your chosen problems you are currently dealing with. You have been assigned with your case worker. We hope to see you strong and back on your feet</p>
+                  <p class="card-text">ID: 009-0209-0000-8931</p>
+              </div>
+			  </div>
+          </div>
+      </div>		  
+            </div>
+          </div>
+        </div>
+      </div>
+    
+	  
+	   <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <img src="images/WarHeroAvatar.png" alt="WarHero" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <span class="w3-right w3-opacity">1 min</span>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+      </div>
+      <!--
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <img src="/w3images/avatar5.png" alt="WarHero" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <span class="w3-right w3-opacity">16 min</span>
+        <h4>Jane Doe</h4><br>
+        <hr class="w3-clear">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+      </div>  
+
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <img src="/w3images/avatar6.png" alt="WarHero" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <span class="w3-right w3-opacity">32 min</span>
+        <h4>Angie Jane</h4><br>
+        <hr class="w3-clear">
+        <p>Have you seen this?</p>
+        <img src="/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+      </div> -->
+      
+    <!-- End Middle Column -->
+    </div>
+	
+	
+	
+	
+    
+    
+  <!-- End Grid -->
+  </div>
+  
+<!-- End Page Container -->
+</div>
+
+
+
+<br>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+  <h5>Footer</h5>
+</footer>
+
+<footer class="w3-container w3-theme-d5">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+ 
+<script>
+// Accordion
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-theme-d1";
+  } else { 
+    x.className = x.className.replace("w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-theme-d1", "");
+  }
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html> 
+
