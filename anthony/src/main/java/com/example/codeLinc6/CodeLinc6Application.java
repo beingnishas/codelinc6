@@ -7,10 +7,16 @@ import org.springframework.context.annotation.ComponentScan;
 //import com.example.codeLinc6.model.*;
 //import java.util.ArrayList;
 @SpringBootApplication
+<<<<<<< HEAD
+@ComponentScan("com.example.CodeLinc6")
+
+=======
 @ComponentScan("com.example.codeLinc6.")
+>>>>>>> c4f2c8d6ac513ae3069f0390f9ebf560459c125e
 public class CodeLinc6Application {
 
-	public static void main(String[] args) {
+	public static void main(String[] args)
+	{
 		SpringApplication.run(CodeLinc6Application.class, args);
 		
 //		com.example.codeLinc6.model.Veteran myVeteran = new com.example.codeLinc6.model.Veteran();
