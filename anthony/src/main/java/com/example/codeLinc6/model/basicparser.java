@@ -11,7 +11,7 @@ public class basicparser {
 
 	public static void main(String[] args) throws IOException {
 		// Insert filepath here
-		String filename = "veterans.txt";
+		String filename = "vets.txt";
 		String filepath = "/resources/" + filename;
 		File file = new File(filepath); 
 		BufferedReader br = new BufferedReader(new FileReader(file)); 
