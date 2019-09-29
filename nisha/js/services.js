@@ -1,19 +1,16 @@
 const HTTP = new XMLHttpRequest();
-<<<<<<< HEAD
 const URL = "distance/test";
 
 var searchButton = document.getElementById("search-btn");
 
 searchButton.onclick = function() 
 {
-=======
 const URL = "http://localhost:8080/services/search?filter=";
 
 var searchButton = document.getElementById("search-btn");
 
 
 searchButton.onclick = function() {
->>>>>>> ad188810fa432743ca0093a80c5952a2a6f681f5
     
     var query = document.getElementById("search-input").innerHTML;
 
@@ -30,17 +27,21 @@ searchButton.onclick = function() {
 }
 
 
-var veteranPhoneButton = document.getElementById(phoneicon);
-veteranPhoneButton.onclick = function()
+var veteranTextMessageButton = document.getElementById(veteranTextMessageButton);
+var veteranTextMessageBox = document.getElementById(veteranTextMessageBox);
+var query = document.getElementById(veteranTextMessageBox).innerHTML;
+
+veteranTextMessageButton.onclick = function()
 {
-    HTTP.open("GET", URL);
+    HTTP.open("GET", URL + query);
     HTTP.send();
 
     HTTP.onreadystatechange = function()
     {
         if (this.readyState == 4 && this.status == 200)
         {
-            console.log(HTTP.)
+            console.log(HTTP.responseText)
+            veteranTextMessageBox.placeholder = "Your message has been sent."
         }
     }
 }

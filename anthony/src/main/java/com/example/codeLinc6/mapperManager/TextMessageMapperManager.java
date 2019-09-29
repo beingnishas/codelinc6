@@ -12,11 +12,11 @@ public class TextMessageMapperManager
 	public static final String ACCOUNT_SID = "ACdbf1c94c37cda2e838f46225219c962f";
 	public static final String AUTH_TOKEN = "78d6ebb45829119c6f041ae81c16d117";
 	
-	public void sendTextMessage(String text, boolean flag)
+	public void sendTextMessage(String text, String user)
 	{
 		Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 		
-		if (flag)
+		if (user == "veteran")
 		{
 			Message message = Message.creator(new PhoneNumber("+17048073107"), new PhoneNumber("+18066863249"),
 				text).create();
