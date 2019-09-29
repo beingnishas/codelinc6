@@ -1,5 +1,7 @@
 package com.example.codeLinc6.controller;
 
+import java.util.ArrayList;
+
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +17,7 @@ public class DistanceController {
 
 	
 	
-	@GetMapping("/test")
+	@GetMapping("/zip")
 	@ResponseBody
 	public String getDistance(@RequestParam("zip_code_1") String zipCodeOne, @RequestParam("zip_code_2") String zipCodeTwo){
 		
@@ -24,6 +26,20 @@ public class DistanceController {
 		RestTemplate restTemplate = new RestTemplate();
 		String result = restTemplate.getForObject(url, String.class);
 		return result;
+	}
+	
+	
+	//Testing method for form posting
+	@GetMapping("/test")
+	@ResponseBody
+	public ArrayList<test> getDistance(@RequestParam("filter") String string){
+		ArrayList<test> tmp = new ArrayList<test>();
+		tmp.add(new test());
+		tmp.add(new test());
+		tmp.add(new test());
+		tmp.add(new test());
+		tmp.add(new test());
+		return tmp;
 	}
 	
 	static public class test {
