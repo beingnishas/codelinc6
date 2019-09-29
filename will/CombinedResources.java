@@ -1,13 +1,48 @@
-
-
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
+import java.util.regex.Pattern;
 
-public class Taggin {
-	public Map<String,ArrayList<String>> tag(Set<String> keys) {
-		Map<String,ArrayList<String>> ret = new TreeMap<String,ArrayList<String>>();
+public class CombinedResources {
+	public static TreeMap<String,ArrayList<String>> parse(String filename) throws IOException {
+		// Insert filepath here
+		String filepath = "C:\\Users\\schmi\\Documents\\GitHub\\codelinc6\\will\\" + filename;
+		File file = new File(filepath); 
+		BufferedReader br = new BufferedReader(new FileReader(file)); 
+		String st; 
+		int count = 0;
+		TreeMap<String,ArrayList<String>> resources = new TreeMap<String,ArrayList<String>>();
+		while ((st = br.readLine())!=null) {
+			count++;
+			if(count<6) {
+				continue;
+			}
+			if(count>51) {
+				break;
+			}
+			if(!st.contains(".")) {
+				continue;
+			}
+			st = st.replaceAll("\\P{Print}", "...");
+			Pattern p = Pattern.compile("\\.{2,}");
+			String[] resourceArr = p.split(st);
+			String name = resourceArr[0];
+			String contact = resourceArr[1];
+			ArrayList<String> empty = new ArrayList<String>();
+			resources.putIfAbsent(name, empty);
+			((ArrayList<String>) resources.get(name)).add(contact);
+		}
+		br.close();
+		return resources;
+	}
+	public static TreeMap<String,ArrayList<String>> tag(Set<String> keys) {
+		TreeMap<String,ArrayList<String>> ret = new TreeMap<String,ArrayList<String>>();
 		ArrayList<String> housing = new ArrayList<String>();
 		ArrayList<String> healthcare = new ArrayList<String>();
 		ArrayList<String> job = new ArrayList<String>();
@@ -86,5 +121,44 @@ public class Taggin {
 				}
 				return ret;
 	}
-	
+	public static ArrayList<String> match(ArrayList<String> tags, TreeMap<String,ArrayList<String>> resources, ArrayList<String> keepers) {
+		if(tags.isEmpty()) {
+			return(keepers);
+		}
+		int highest = 0;
+		String keep = "";
+		ArrayList<String> bestRemove = new ArrayList<String>();
+		for(String k:resources.keySet()) {
+			ArrayList<String> currRemove = new ArrayList<String>();
+			ArrayList<String> vals = resources.get(k);
+			int count = 0;
+			for(String s:vals) {
+				if(tags.contains(s)){
+					count++;
+					currRemove.add(s);
+				}
+			}
+			if(highest<count) {
+				highest = count;
+				keep = k;
+				bestRemove = currRemove;
+			}
+		}
+		if(highest == 0) {
+			return(keepers);
+		}
+		tags.removeAll(bestRemove);
+		keepers.add(keep);
+		resources.remove(keep);
+		return(match(tags,resources,keepers));
+	}
+	public static void main(String[] args) throws IOException {
+		TreeMap resources = parse("vets.txt");
+		TreeMap taggedResources = tag(resources.keySet());
+		ArrayList<String> tags = new ArrayList<String>(Arrays.asList("healthcare","job"));
+		ArrayList<String> matches = match(tags,taggedResources,new ArrayList<String>());
+		for(String k:matches) {
+			System.out.println(k);
+		}
+	}
 }
