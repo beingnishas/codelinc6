@@ -15,13 +15,17 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 <body class="w3-theme-l5">
  
 <!-- Navbar -->
-<div class="w3-top">
+<nav role="navigation" class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
   <a href="dashboard.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Athena Help Center</a>
-  <a href="profile.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="My Profile" aria-label="navigate to my profile"><i class="fa fa-user"></i></a>
+  <a href="profile.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="My Veretan Profile" aria-label="navigate to my profile"><i class="fa fa-user"></i></a>
+  
+  <a href="caseworkerprofile.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="My CaseWorker Profile" aria-label="navigate to my CaseWorker profile"><i class="fa fa-user"></i></a>
+  
+  
   <a href="services.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Services" aria-label="navigate to services"><i class="	fa fa-handshake-o"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="History" aria-label="navigate to history"><i class="fa fa-history"></i></a>
+  <a href="history.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="History" aria-label="navigate to history"><i class="fa fa-history"></i></a>
     <div class="w3-dropdown-hover w3-hide-small">
     <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">2</span></button>     
     <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
@@ -30,17 +34,16 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
     </div>
   </div>
   
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="FAQ"><i class="fa fa-question-circle-o"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Contact Us"><i class="fa fa-phone"></i></a>
-
-
- 
+  <a href="faqs.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="FAQs"><i class="fa fa-question-circle-o"></i></a>
+  <a href="contactus.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Contact Us"><i class="fa fa-phone"></i></a>
  </div>
-</div>
+</nav>
 
 <!-- Navbar on small screens -->
 <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
+  <a href="profile.html" class="w3-bar-item w3-button w3-padding-large">My Veretan Profile</a>
+  <a href="caseworkerprofile.html" class="w3-bar-item w3-button w3-padding-large">My CaseWorker Profile</a>
+  
 
   <a href="#" class="w3-bar-item w3-button w3-padding-large">Services</a>
   <a href="#" class="w3-bar-item w3-button w3-padding-large">History</a>
@@ -69,6 +72,38 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
         </div>
       </div>
       <br>
+	  
+	   <div class="w3-card w3-round w3-white">
+        <div class="w3-container">
+         <h5 class="w3-center">Next Steps</h5>
+        <table class="w3-table w3-striped w3-white">
+			  <tr>
+				<td><i class="fa fa-bullseye w3-text-blue w3-large"></i></td>
+				<td> Check with fellow members</td>
+			  </tr>
+			  <tr>
+				<td><i class="fa fa-bullseye w3-text-red w3-large"></i></td>
+				<td>Submit documents to nearest center</td>
+			  </tr>
+			  <tr>
+				<td><i class="fa fa-bullseye w3-text-yellow w3-large"></i></td>
+				<td>Register for stage 2</td>
+			  </tr>
+			  <tr>
+				<td><i class="fa fa-bullseye w3-text-red w3-large"></i></td>
+				<td>Check for events in your area</td>
+			  </tr>
+			  <tr>
+				<td><i class="fa fa-bullseye w3-text-blue w3-large"></i></td>
+				<td>Check transactions.</td>
+			  </tr>
+			  <tr>
+				<td><i class="fa fa-bullseye w3-text-red w3-large"></i></td>
+				<td>Ready for next screening</td>
+			  </tr>
+		</table>       
+		</div>
+      </div>
       
       <!-- Accordion 
       <div class="w3-card w3-round">
@@ -90,19 +125,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
         </div>      
       </div>
       <br> -->
-	  
-      <div class="w3-col m7 w3-container w3-padding">
-	      
-			  <h2>Based on your profile below are s</h2>
 
-<p>JavaScript can show hidden HTML elements.</p>
-
-<p id="demo" style="display:none">Hello JavaScript!</p>
-
-<button type="button" onclick="document.getElementById('demo').style.display='block'">Click Me!</button>
-
-</body>
-	  </div>
     
     <!-- End Left Column -->
     </div>
@@ -123,7 +146,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 				<td><i>10 mins</i></td>
 			  </tr>
 			  <tr>
-				<td><i class="fa fa-bell w3-text-red w3-large"></i></td>
+				<td><i class="fa fa-check w3-text-red w3-large"></i></td>
 				<td>Home loan request approved</td>
 				<td><i>15 mins</i></td>
 			  </tr>
@@ -134,17 +157,17 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 			  </tr>
 			  <tr>
 				<td><i class="fa fa-comment w3-text-red w3-large"></i></td>
-				<td>New comments on Insura.</td>
+				<td>New comments on Insurance</td>
 				<td><i>25 mins</i></td>
 			  </tr>
 			  <tr>
 				<td><i class="fa fa-bookmark w3-text-blue w3-large"></i></td>
-				<td>Check transactions.</td>
+				<td>Refill the pension documents</td>
 				<td><i>28 mins</i></td>
 			  </tr>
 			  <tr>
 				<td><i class="fa fa-laptop w3-text-red w3-large"></i></td>
-				<td>CPU overload.</td>
+				<td>Re-submit the details at the center</td>
 				<td><i>35 mins</i></td>
 			  </tr>
 			 
@@ -152,15 +175,139 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 			<br>
 
 			
-			 <!-- 
-              <h6 class="w3-opacity">Type the service you are looking for here...</h6>
-              <p contenteditable="true" class="w3-border w3-padding"></p>
-              <button type="button" class="w3-button w3-theme"></i>Search Info</button> -->
-            </div>
+			</div>
           </div>
         </div>
       </div>
       
+	  <br>
+	  
+	        <div class="w3-row-padding">
+        <div class="w3-col m12">
+          <div class="w3-card w3-round w3-white">
+            <div class="w3-container w3-padding">
+			
+			<h5>Based on your profile here are some recommendations</h5>
+			
+<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%; display:inline-block;">
+					<div class="card-body">
+						<div class="results w3-container w3-card w3-white w3-round w3-margin">
+							<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%;">
+								<div class="card-body">
+									<p>Healthcare Services</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%; display:inline-block;">
+					<div class="card-body">
+						<div class="results w3-container w3-card w3-white w3-round w3-margin">
+							<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%;">
+								<div class="card-body">
+									<p>   Housing Services</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%; display:inline-block;">
+					<div class="card-body">
+						<div class="results w3-container w3-card w3-white w3-round w3-margin">
+							<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%;">
+								<div class="card-body">
+									<p>Pension Services    </p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%; display:inline-block;">
+					<div class="card-body">
+						<div class="results w3-container w3-card w3-white w3-round w3-margin">
+							<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%;">
+								<div class="card-body">
+									<p>Certificate Services</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%; display:inline-block;">
+					<div class="card-body">
+						<div class="results w3-container w3-card w3-white w3-round w3-margin">
+							<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%;">
+								<div class="card-body">
+									<p>Food Services</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%; display:inline-block;">
+					<div class="card-body">
+						<div class="results w3-container w3-card w3-white w3-round w3-margin">
+							<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%;">
+								<div class="card-body">
+									<p>Legal Services</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+          </div>
+        </div>
+      </div>
+	  
+	  
+<!--<div class="results w3-container w3-card w3-white w3-round w3-margin">
+<h5>Based on your profile here are some recommendations </h5>
+				<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%; display:inline-block;">
+					<div class="card-body">
+						<div class="results w3-container w3-card w3-white w3-round w3-margin">
+							<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%;">
+								<div class="card-body">
+									<p >Health care services</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%; display:inline-block;">
+					<div class="card-body">
+						<div class="results w3-container w3-card w3-white w3-round w3-margin">
+							<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%;">
+								<div class="card-body">
+									<p >Health care services</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			  <div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%; display:inline-block;">
+					<div class="card-body">
+					<div class="results w3-container w3-card w3-white w3-round w3-margin">
+				<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%;">
+					<div class="card-body">
+					<p>Insurance services</p>
+              </div>
+			  </div>
+</div>
+              </div>
+			  </div>
+			  <div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%; display:inline-block;">
+					<div class="card-body">
+					<div class="results w3-container w3-card w3-white w3-round w3-margin">
+				<div class="card w-100 p-1 m-2 border-dark" style="width: 32.5%;">
+					<div class="card-body">
+					<p class="card-text">Housing Services</p>
+              </div>
+			  </div>
+</div>
+              </div>
+			  </div>
+</div> -->
 
 	  
     

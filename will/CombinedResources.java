@@ -80,7 +80,7 @@ public class CombinedResources {
 		education.add("Vocational Rehabilitation and Employment");
 		education.add("Education Benefits");
 		education.add("eBenefits");
-
+		
 		money.add("Pension Management Center");
 		money.add("Vocational Rehabilitation and Employment");
 		money.add("VA Benefit Payment Rates");
@@ -111,35 +111,41 @@ public class CombinedResources {
 		healthcare.add("Health Care Eligibility");
 		healthcare.add("Mental Health");
 		healthcare.add("My HealtheVet");
-
-		//federal,healthcare,food,housing,state,money,job,insurance
-		for(String org : keys) {
-			if(healthcare.contains(org)) {
-				ret.putIfAbsent(org, new ArrayList<String>());
-				ret.get(org).add("healthcare");
-			}
-			if(money.contains(org)) {
-				ret.putIfAbsent(org,new  ArrayList<String>());
-				ret.get(org).add("financial");
-			}
-			if(job.contains(org)) {
-				ret.putIfAbsent(org,new ArrayList<String>());
-				ret.get(org).add("job");
-			}
-			if(housing.contains(org)) {
-				ret.putIfAbsent(org,new ArrayList<String>());
-				ret.get(org).add("housing");
-			}
-			if(education.contains(org)) {
-				ret.putIfAbsent(org,new ArrayList<String>());
-				ret.get(org).add("education");
-			}
-			else {
-				ret.putIfAbsent(org, new ArrayList<String>());
-				ret.get(org).add("other");
-			}
-
-
+		
+				//federal,healthcare,food,housing,state,money,job,insurance
+				for(String org : keys) {
+					if(healthcare.contains(org)) {
+						ret.putIfAbsent(org, new ArrayList<String>());
+						ret.get(org).add("healthcare");
+					}
+					if(money.contains(org)) {
+						ret.putIfAbsent(org,new  ArrayList<String>());
+						ret.get(org).add("financial");
+					}
+					if(job.contains(org)) {
+						ret.putIfAbsent(org,new ArrayList<String>());
+						ret.get(org).add("job");
+					}
+					if(housing.contains(org)) {
+						ret.putIfAbsent(org,new ArrayList<String>());
+						ret.get(org).add("housing");
+					}
+					if(education.contains(org)) {
+						ret.putIfAbsent(org,new ArrayList<String>());
+						ret.get(org).add("education");
+					}
+					else {
+						ret.putIfAbsent(org, new ArrayList<String>());
+						ret.get(org).add("other");
+					}
+						
+					
+				}
+				return ret;
+	}
+	public static ArrayList<String> match(ArrayList<String> tags, TreeMap<String,ArrayList<String>> resources, ArrayList<String> keepers) {
+		for(String t:tags) {
+			System.out.println(t);
 		}
 		return ret;
 	}
