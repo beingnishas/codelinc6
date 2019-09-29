@@ -49,7 +49,6 @@ public class CombinedResources {
 		ArrayList<String> job = new ArrayList<String>();
 		ArrayList<String> education = new ArrayList<String>();
 		ArrayList<String> money = new ArrayList<String>();
-		ArrayList<String> other = new ArrayList<String>();
 		housing.add("Home Loans");
 		housing.add("Homeless Veterans");
 		housing.add("Home Loan Guaranty");
@@ -59,6 +58,7 @@ public class CombinedResources {
 		education.add("Education");
 		education.add("Vocational Rehabilitation and Employment");
 		education.add("Education Benefits");
+		education.add("eBenefits");
 		
 		money.add("Pension Management Center");
 		money.add("Vocational Rehabilitation and Employment");
