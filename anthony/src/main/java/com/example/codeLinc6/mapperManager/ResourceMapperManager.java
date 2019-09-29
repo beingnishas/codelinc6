@@ -1,6 +1,6 @@
 package com.example.codeLinc6.mapperManager;
 import java.util.ArrayList;
-import ResourceMatcher; 
+import com.example.codeLinc6.model.*;
 
 import org.springframework.stereotype.Component;
 
@@ -14,6 +14,6 @@ import com.example.codeLinc6.model.Veteran;
 public class ResourceMapperManager {
 
 	public ArrayList<ResourceMatcher>  getResources(){
-		return new ArrayList<Veteran>();
+		return new ArrayList<ResourceMatcher>();
 	}
 }
