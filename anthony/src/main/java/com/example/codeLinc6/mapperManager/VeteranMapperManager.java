@@ -1,4 +1,4 @@
-package com.example.codeLinc6.mappermanager;
+package com.example.codeLinc6.mapperManager;
 
 import java.util.ArrayList;
 
